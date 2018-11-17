@@ -4,7 +4,9 @@ const morgan = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
-
+require('./models/files')
+require('./models/customer')
+require('./models/manager')
 dotenv.config()
 
 const app = express();
