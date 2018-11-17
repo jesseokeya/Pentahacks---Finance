@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const managerSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
+    username: String,
+    password: String,
     email: String,
     employeeNumber: String,
     currentCustomers: Array,

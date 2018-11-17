@@ -11,7 +11,9 @@ const customerSchema = new mongoose.Schema({
     },
     address: String,
     currentManager: String,
+    username: String,
     previousManagers: Array,
+    password: String,
     files: Array,
     created: {
         type: Date,

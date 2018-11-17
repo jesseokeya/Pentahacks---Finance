@@ -14,9 +14,9 @@ router.get('/:id', async (req, res) => {
     res.send(customer)
 })
 
-router.post('/', async (req, res) => {
-    const customers = await Customers.find({})
-    res.send(customers)
+router.post('/login', async (req, res) => {
+   const { username, password } = req.body
+   const customer = await Customers.find({ username, password })
 })
 
 
