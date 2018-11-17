@@ -9,6 +9,7 @@ dotenv.config()
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const { files, customer, manager, email } = require('./api')
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
@@ -45,5 +46,11 @@ app.get('/404', (_, res) => {
 app.get('/blank', (_, res) => {
   res.sendFile(__dirname + '/views/blank.html');
 })
+
+app.use('/api/email', email)
+app.use('/api/customer', customer)
+app.use('/api/manager', manager)
+app.use('/api/files', files)
+
 
 app.listen(PORT, () => console.log(`Server Running On Port *${PORT}`))
