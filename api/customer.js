@@ -16,7 +16,11 @@ router.get('/:id', async (req, res) => {
 
 router.post('/login', async (req, res) => {
    const { username, password } = req.body
-   const customer = await Customers.find({ username, password })
+   let customer = await Customers.find({ username, password })
+   if (customer.length === 0) {
+        customer = await Customers.find({ email: username, password })
+   }
+   const buildReponse = await _buildResponse(customer)
 })
 
 
