@@ -49,9 +49,9 @@ app.get('/blank', (_, res) => {
   res.sendFile(__dirname + '/views/blank.html');
 })
 
-app.use('/api/email', email)
-app.use('/api/customer', customer)
-app.use('/api/manager', manager)
+app.use('/api/emails', email)
+app.use('/api/customers', customer)
+app.use('/api/managers', manager)
 app.use('/api/files', files)
 
 
