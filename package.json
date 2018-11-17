@@ -1,0 +1,25 @@
+{
+  "name": "pentahacks_finance",
+  "version": "1.0.0",
+  "description": "Commercial Banking Relationship Manager",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesseokeya/Pentahacks_Finance.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "mongo",
+    "sendgrid"
+  ],
+  "author": "Jesse Okeya, Shivani Mehan, Kevin Kannammalil, Dev P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesseokeya/Pentahacks_Finance/issues"
+  },
+  "homepage": "https://github.com/jesseokeya/Pentahacks_Finance#readme"
+}

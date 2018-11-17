@@ -1,104 +1,60 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
+lib-cov
+*.seed
 *.log
-local_settings.py
-db.sqlite3
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
 
-# Flask stuff:
-instance/
-.webassets-cache
+pids
+logs
+results
+tmp
 
-# Scrapy stuff:
-.scrapy
+# Optional npm cache directory
+.npm
 
-# Sphinx documentation
-docs/_build/
+#Build
+public/css/main.css
+.nyc_output/*
 
-# PyBuilder
-target/
+#Libraries from npm packages
+public/js/lib/bootstrap.min*
+public/js/lib/jquery.min*
+public/js/lib/popper.min*
 
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
+# API keys and secrets
 .env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
+# Dependency directory
+node_modules
+bower_components
 
-# Rope project settings
-.ropeproject
+# Editors
+.idea
+.vscode
+*.iml
+modules.xml
+*.ipr
 
-# mkdocs documentation
-/site
+# Folder config file
+Desktop.ini
 
-# mypy
-.mypy_cache/
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+coverage
+package-lock.json
