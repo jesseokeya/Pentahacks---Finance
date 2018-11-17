@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get(['/', '/dashboard'], (_, res) => {
-  res.send(__dirname + '/views/index.html')
+  res.sendFile(__dirname + '/views/index.html');
 })
 
 app.get('/login', (_, res) => {
