@@ -129,12 +129,28 @@ padding: 20px;
 width:600px;
 heigth:300px;
 }
+
+.grid-container {
+position: absolute;
+bottom:15%;
+left:3%;
+  display: grid;
+   grid-template-columns: 200px 200px 200px 200px 200px 200px 200px 200px 200px;
+   padding:10px;
+}
+.grid-item{
+ padding:20px;
+border:1px solid black;
+
+
+}
+
 </style>
 
 </head>
 
 
-<body>
+<body onload="checkEdits()">
 	<div class="backround">
 	</div>
 
@@ -157,12 +173,55 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
+var linkClick = 0; 
+  function update_link(obj){ 
+  if (linkClick == 0){obj.style.backgroundColor = '#db1904'};
+   if (linkClick == 1){obj.style.backgroundColor = '#0481db'};
+  if (linkClick == 2){obj.style.backgroundColor = '#11d631'};
+  if (linkClick >2 ) {obj.style.backgroundColor = 'red'; linkClick=0};
+  linkClick++; 
+}
+
+function saveEdits() {
+var editElem = document.getElementById("edit");
+var userVersion = editElem.innerHTML;
+localStorage.userEdits = userVersion;
+document.getElementById("update").innerHTML="Edits saved!";
+}
+
+function checkEdits() {
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
 </script>
 
 <div class="content">
 
 		<div class="Tasks">
-			
+		
+			<div class="grid-container">
+  <div class="grid-item" contenteditable="true">contact lead</div>
+  <div class="grid-item" contenteditable="true">draft proposal</div>
+  <div class="grid-item" contenteditable="true">collect payment</div>
+   <div class="grid-item" contenteditable="true">sales pitch</div>
+  <div class="grid-item" contenteditable="true">dept meeting</div>
+  <div class="grid-item" contenteditable="true">review client files</div>
+   <div class="grid-item" contenteditable="true" >complete develepoment form</div>
+  <div class="grid-item" contenteditable="true">email john</div>
+  <div class="grid-item" contenteditable="true">sign off expense report </div>
+    <div class="grid-item" onclick='update_link(this)'>Status</div>
+  <div class="grid-item" onclick='update_link(this)'>Status</div>
+  <div class="grid-item" onclick='update_link(this)'>Status</div>
+  <div class="grid-item" onclick='update_link(this)'>Status</div>
+  <div class="grid-item" onclick='update_link(this)'>Status</div>
+  <div class="grid-item" onclick='update_link(this)'>Status</div>
+  <div class="grid-item" onclick='update_link(this)'>Status</div>
+  <div class="grid-item" onclick='update_link(this)'>Status</div>
+  <div class="grid-item" onclick='update_link(this)'>Status</div>
+  <input type="button" value="save my edits" onclick="saveEdits()" >
+</div>
+ 
 			
 		</div>
 
