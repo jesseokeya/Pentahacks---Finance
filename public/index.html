@@ -3,7 +3,6 @@
 
 <head>
 <style type="text/css">
-
 .nav {
 text-align:center;
   width: auto;
@@ -12,7 +11,6 @@ text-align:center;
   top: 0;
   left: 40%;
 }
-
 .nav > a {
   font-size: 18px;
   font-family: verdana;
@@ -26,7 +24,6 @@ text-align:center;
   transition: 300ms;
   text-decoration: none;
 }
-
 a.active,
 .nav a:hover {
   background-color: white;
@@ -36,7 +33,6 @@ a.active,
   cursor: pointer;
   text-decoration: none;
 }
-
 .a,
 .b,
 .c,
@@ -44,20 +40,16 @@ a.active,
 .e {
   width: 90%;
 }
-
 .chartContainer{
 position:absolute;
 left:1000px;
 top:100px;
-
 }
-
 #chartContainer1{
 position:absolute;
 top:45%;
 right:0;
 }
-
 #chartContainer2{
 position:absolute;
 top:45%;
@@ -78,9 +70,6 @@ position:absolute;
 top:45%;
 right:0;
 }
-
-
-
 #mySidenav {
     height: 100%;
     width: 0;
@@ -93,7 +82,6 @@ right:0;
     transition: 0.5s;
     padding-top: 60px;
 }
-
 #mySidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -102,11 +90,9 @@ right:0;
     display: block;
     transition: 0.3s;
 }
-
 #mySidenav a:hover {
     color: #f1f1f1;
 }
-
 #mySidenav .closebtn {
     position: absolute;
     top: 0;
@@ -114,41 +100,35 @@ right:0;
     font-size: 36px;
     margin-left: 50px;
 }
-
-
 .wrapper {
-    display: grid;
 position: absolute;
-top:50%
-text-align:right;
-right:10%;
+top:0;
+right:0;
 font-size:20px;
-
-
+width:600px;
+height:70px;
+border:2px solid black;
+padding: 20px;
 	
 	}
 .incomeNum{
 border:2px solid black;
 position: absolute;
 right:0;
-top:0;
+top:13%;
 padding: 20px;
 width:600px;
 heigth:100px;
-
-
 }
 .additionalInfo{
 border:2px solid black;
 position: absolute;
 right:0;
-top:15%;
+top:28%;
 padding: 20px;
 width:600px;
 heigth:300px;
-
 }
-
 </style>
 
 </head>
@@ -161,8 +141,8 @@ heigth:300px;
 	
 <div id="mySidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a class="a">Client</a>
-		<a class="b">Income</a>
+		<a class="a">Tasks</a>
+		<a class="b">Client</a>
 		<a class="d">Services</a>
 		<a class="e">Contact</a>
 </div>
@@ -174,7 +154,6 @@ heigth:300px;
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
-
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
@@ -182,9 +161,14 @@ function closeNav() {
 
 <div class="content">
 
-		<div class="client">
-			<h1 class = "Client Info">
-			<div class="wrapper">
+		<div class="Tasks">
+			
+			
+		</div>
+
+		<div class="Client">
+		
+		<div class="wrapper">
 				<div>Client name:</div>
 				
 				<div>Address:</div>
@@ -194,9 +178,6 @@ function closeNav() {
 				
 			</div>
 			
-		</div>
-
-		<div class="income">
 		<div class="incomeNum">Monthly Income:<br/>Real estate: Adress<br/> Type of proeprty: Personal Home <br/>purchase price: $$$ <br/>mortgage payements: $<br/> </div>
 		
 		<div id="chartContainer1" style="width: 700px; height: 500px;"></div>
@@ -229,40 +210,36 @@ function closeNav() {
 	<script>
 		$(document).ready(function () {
 			$(".a").click(function () {
-				$(".client").fadeIn();
-				$(".income").fadeOut();
+				$(".Tasks").fadeIn();
+				$(".Client").fadeOut();
 				$(".invest").fadeOut();
 				$(".services").fadeOut();
 				$(".contact").fadeOut();
 			});
-
 			$(".b").click(function () {
-				$(".client").fadeOut();
-				$(".income").fadeIn();
+				$(".Tasks").fadeOut();
+				$(".Client").fadeIn();
 				$(".invest").fadeOut();
 				$(".services").fadeOut();
 				$(".contact").fadeOut();
 			});
-
 			$(".c").click(function () {
-				$(".client").fadeOut();
-				$(".income").fadeOut();
+				$(".Tasks").fadeOut();
+				$(".Client").fadeOut();
 				$(".invest").fadeIn();
 				$(".services").fadeOut();
 				$(".contact").fadeOut();
 			});
-
 			$(".d").click(function () {
-				$(".client").fadeOut();
-				$(".income").fadeOut();
+				$(".Tasks").fadeOut();
+				$(".Client").fadeOut();
 				$(".invest").fadeOut();
 				$(".services").fadeIn();
 				$(".contact").fadeOut();
 			});
-
 			$(".e").click(function () {
-				$(".client").fadeOut();
-				$(".income").fadeOut();
+				$(".Tasks").fadeOut();
+				$(".Client").fadeOut();
 				$(".invest").fadeOut();
 				$(".services").fadeOut();
 				$(".contact").fadeIn();
@@ -293,7 +270,6 @@ function closeNav() {
 	}]
 });
 chart.render();
-
 	
 var chart = new CanvasJS.Chart("chartContainer2",
     {
@@ -330,7 +306,6 @@ var chart = new CanvasJS.Chart("chartContainer2",
         ]
     });
 chart.render();
-
 var chart = new CanvasJS.Chart("chartContainer3",
     {
         animationEnabled: true,
@@ -354,7 +329,6 @@ var chart = new CanvasJS.Chart("chartContainer3",
         ]
     });
 chart.render();
-
 var chart = new CanvasJS.Chart("chartContainer4",
     {
         animationEnabled: true,
@@ -390,12 +364,8 @@ var chart = new CanvasJS.Chart("chartContainer4",
         ]
     });
 chart.render();
-
-
-
 	</script>
 	
 
 </body>
 </html>
-
